@@ -2,10 +2,10 @@
 
 namespace App\Containers\Vendor\Livewire\Providers;
 
-use App\Containers\Vendor\Debugger\Tasks\QueryDebuggerTask;
 use Apiato\Core\Abstracts\Providers\MainServiceProvider as AbstractMainServiceProvider;
 use Jenssegers\Agent\AgentServiceProvider;
 use Jenssegers\Agent\Facades\Agent;
+use App\Ship\Parents\Providers\MiddlewareServiceProvider;
 use App\Containers\Vendor\Livewire\Providers\LivewireViewsProvider;
 use Illuminate\Support\Facades\Blade;
 /**
@@ -48,6 +48,5 @@ class MainServiceProvider extends AbstractMainServiceProvider
     public function register(): void
     {
         parent::register();
-            app(QueryDebuggerTask::class)->run();
     }
 }

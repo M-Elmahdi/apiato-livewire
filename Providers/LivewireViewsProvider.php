@@ -12,7 +12,5 @@ class LivewireViewsProvider
 
         Blade::component('livewire@folder::components.master', 'master');
 
-
-
     }
 }
