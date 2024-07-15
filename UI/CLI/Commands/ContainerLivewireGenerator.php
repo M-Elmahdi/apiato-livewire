@@ -64,7 +64,7 @@ class ContainerLivewireGenerator extends ExtendedGeneratorCommand implements Com
     /**
      * @return array
      */
-    public function getUserInputs()
+    public function getUserInputs(): array|null
     {
         $component_name = $this->checkParameterOrAsk('component_name', 'Enter the name of the Component', '');
 
@@ -153,6 +153,8 @@ class ContainerLivewireGenerator extends ExtendedGeneratorCommand implements Com
 
 
         $this->printInfoMessage('All Done  you have to change the path to your view to: livewire@' . strtolower($containerName) . '::' . strtolower($component_name));
+
+        return $this->inputs;
     }
 
     /**
