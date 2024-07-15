@@ -6,9 +6,9 @@
     "type": "apiato-container",
     "require": {
 
-       "livewire/livewire": "^2.0",
-       "wire-elements/modal": "^1.0" ,
-       "jantinnerezo/livewire-alert": "^2.2"
+       "livewire/livewire": "^3.0",
+       "wire-elements/modal": "^2.0" ,
+       "jantinnerezo/livewire-alert": "^3.0"
   } ,
     "extra": {
         "apiato": {

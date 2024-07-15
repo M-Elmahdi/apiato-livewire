@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-        @stack('styles')
+        {{-- @stack('styles') --}}
         <!-- Styles -->
 
             @livewireStyles
@@ -23,8 +23,9 @@
 
         @livewire('livewire-ui-modal')
         @livewireScripts
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-        @stack('scripts')
+        {{-- @stack('scripts') --}}
 
 </body>
 </html>

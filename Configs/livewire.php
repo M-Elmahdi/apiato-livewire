@@ -65,6 +65,7 @@ return [
     |
     */
 
+    //deprecated
     'asset_url' => null,
 
     /*
@@ -77,7 +78,7 @@ return [
     | a Livewire component updates). It is set to "web" by default.
     |
     */
-
+    //deprecated
     'middleware_group' => 'web',
 
     /*
@@ -118,7 +119,17 @@ return [
     | Example: for Laravel Vapor, it would be "/tmp/storage/bootstrap/cache/livewire-components.php".
     |
     */
+    //deprecated
+    // 'manifest_path' =>app_path(). '/Containers/Vendor/Livewire/Bootstrap/livewire-components.php',
 
-    'manifest_path' =>app_path(). '/Containers/Vendor/Livewire/Bootstrap/livewire-components.php',
+    'legacy_model_binding' => false,
+ 
+    'inject_assets' => true,
+    
+    'inject_morph_markers' => true,
+    
+    'navigate' => false,
+    
+    'pagination_theme' => 'tailwind',
 
 ];
