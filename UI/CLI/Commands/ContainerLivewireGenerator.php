@@ -108,7 +108,7 @@ class ContainerLivewireGenerator extends ExtendedGeneratorCommand implements Com
 
         // create the MainServiceProvider for the container
         $this->printInfoMessage('Generating MainServiceProvider');
-        $this->call('apiato:generate:serviceprovider', [
+        $this->call('apiato:generate:provider', [
             '--section' => 'Livewire',
             '--container' => $containerName,
             '--file' => 'MainServiceProvider',

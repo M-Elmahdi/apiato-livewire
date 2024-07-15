@@ -105,7 +105,7 @@ return [
         ],
         'max_upload_time' => 5, // Max duration (in minutes) before an upload gets invalidated.
     ],
-     // $this->loadRoutesFrom("{$this->package->basePath('/../routes/')}{$routeFileName}.php");
+    //  $this->loadRoutesFrom("{$this->package->basePath('/../routes/')}{$routeFileName}.php");
     /*
     |--------------------------------------------------------------------------
     | Manifest File Path
@@ -120,7 +120,7 @@ return [
     |
     */
     //deprecated
-    // 'manifest_path' =>app_path(). '/Containers/Vendor/Livewire/Bootstrap/livewire-components.php',
+    'manifest_path' =>app_path(). '/Containers/Vendor/Livewire/Bootstrap/livewire-components.php',
 
     'legacy_model_binding' => false,
  
