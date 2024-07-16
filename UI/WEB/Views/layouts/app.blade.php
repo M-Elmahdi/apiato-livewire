@@ -1,32 +1,29 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{config('app.name')}}</title>
+        <title>{{ $title ?? 'Page title' }}</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        @vite(['resources/css/app.css', 'resources/css/solid/style.css'])
 
-        {{-- @stack('styles') --}}
-        <!-- Styles -->
+        <!-- Styles Injection -->
+        @stack('styles')
+        @livewireStyles
+    </head>
 
-            @livewireStyles
-        </head>
-
-        <body class="font-body antialiased ">
-        @yield('content')
-
+    <body>
+        
+        @yield('content', $slot ?? '')
 
         @livewire('livewire-ui-modal')
         @livewireScripts
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-        {{-- @stack('scripts') --}}
+        <!-- Scripts Injection -->
+        @stack('scripts')
 
-</body>
+    </body>
 </html>
-
