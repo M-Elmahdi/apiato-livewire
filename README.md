@@ -4,7 +4,7 @@
 
 
 #### This Apiato container provides a simple and easy way to add Livewire to Views.
-
+---This repo was built upon this package below---
 #### Github https://github.com/Elshaden/apiato-livewire.git
    
 
@@ -21,7 +21,7 @@ _Don't take my word for it..  Go on and give a test run..._
 
 In Existing Apiato Application
 ```  
-composer require elshaden/apiato-livewire 
+composer require elmahdi/apiato-livewire 
 
 ```  
 
@@ -37,11 +37,13 @@ php artisan apiato:generate:container:livewire
 `
 
 #### you will be prompted to enter the Details of the Component
-- for Section enter Livewire or just enter, the system will create under the Livewire section regardless.
-- for File name just click enter leave as is
-- for the Container  Enter the name of the Container, Not to be confused with the Component, this is just like any other Apiato Container
-- the Component , that is your desired Livewire Component , you can use dots to define subfolders within the same Container
-
+- for Section enter Livewire or just press Enter, the system will create under the Livewire section regardless.
+- Next is Container, you have to specify the directory under which a container will be created inside the new livewire section created in the previous step
+- Press Enter again for container file name leave as blank
+- Press Enter again when given "enter Component name", if given any value, an error will be thrown aborting the process.
+- Press Enter again when given "enter view name" feel free to specify you view name.
+- After that finish the other steps as you wish.
+- Finally upon finishing the command an error will be thrown expressing composer.stub error not found, rest assured ignore the error, you're set to go.
 
 #### This will create a new section called  Livewire
 - app
